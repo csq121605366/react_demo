@@ -49,9 +49,7 @@ devMiddleware.waitUntilValid(() => {
 app.listen(port, function () {
   console.log('Example app listening on port!\n' + port);
 });
-if (module.hot) {
-  module.hot.accept();
-}
+
 module.exports = {
   ready: readyPromise,
   close: () => {

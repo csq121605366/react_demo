@@ -6,13 +6,13 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 var FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 module.exports = {
     entry: {
-        app: ['./src/index.js', 'webpack-hot-middleware/client']
+        app: ['./src/index.jsx', 'webpack-hot-middleware/client']
     },
     devtool: '#cheap-module-eval-source-map',
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.jsx|\.js$/,
                 exclude: /(node_modules|bower_components)/,
                 use: {
                     loader: 'babel-loader',
