@@ -3,7 +3,8 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-var FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
+var FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
+
 module.exports = {
     entry: {
         app: ['./src/index.jsx', 'webpack-hot-middleware/client']
@@ -39,6 +40,6 @@ module.exports = {
         path: path.resolve(__dirname, ''),
         filename: '[name].bundle.js',
         //publicPath 也会在服务器脚本用到，以确保文件资源能够在 http://localhost:3000 下正确访问，我们稍后再设置端口号。
-        publicPath: '/'
+        publicPath: ''
     }
 }
